@@ -1,0 +1,13 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+      
+        DateTime dataHoraAtual = DateTime.Now;
+
+
+        Console.WriteLine("Data e Hora Atual: " + dataHoraAtual.ToString());
+    }
+}
