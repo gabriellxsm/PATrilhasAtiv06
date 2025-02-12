@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+
+        Console.Write("Digite a primeira data (formato: dd/MM/yyyy): ");
+        DateTime data1 = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+
+        Console.Write("Digite a segunda data (formato: dd/MM/yyyy): ");
+        DateTime data2 = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+
+        TimeSpan diferenca = data2 - data1;
+
+        Console.WriteLine("A diferença entre as duas datas é de " + diferenca.Days + " dias.");
+    }
+}
