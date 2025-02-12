@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite sua data de nascimento (formato: dd/MM/yyyy): ");
+        DateTime dataNascimento = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+        DateTime dataAtual = DateTime.Now;
+
+    
+        int idade = dataAtual.Year - dataNascimento.Year;
+
+ 
+        if (dataAtual.Month < dataNascimento.Month || (dataAtual.Month == dataNascimento.Month && dataAtual.Day < dataNascimento.Day))
+        {
+            idade--;
+        }
+
+  
+        Console.WriteLine("Sua idade é: " + idade + " anos.");
+    }
+}
