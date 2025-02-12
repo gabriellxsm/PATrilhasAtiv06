@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+     
+        Console.WriteLine("Escolha uma cor:");
+        Console.WriteLine("1 - Vermelho");
+        Console.WriteLine("2 - Azul");
+        Console.WriteLine("3 - Verde");
+
+        int corEscolhida = int.Parse(Console.ReadLine());
+
+        switch (corEscolhida)
+        {
+            case 1:
+                Console.WriteLine("Você escolheu a cor Vermelho.");
+                break;
+            case 2:
+                Console.WriteLine("Você escolheu a cor Azul.");
+                break;
+            case 3:
+                Console.WriteLine("Você escolheu a cor Verde.");
+                break;
+            default:
+                Console.WriteLine("Opção inválida.");
+                break;
+        }
+    }
+}
