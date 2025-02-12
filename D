@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+ 
+        Console.Write("Digite a data para verificar se é um feriado (formato: dd/MM/yyyy): ");
+        DateTime data = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+       
+        DateTime[] feriados = new DateTime[]
+        {
+            new DateTime(data.Year, 1, 1),    // Ano Novo
+            new DateTime(data.Year, 9, 7),    // Dia da Independência
+            new DateTime(data.Year, 12, 25)   // Natal
+        };
+
+        bool ehFeriado = false;
+
+
+        foreach (var feriado in feriados)
+        {
+            if (data.Date == feriado.Date)
+            {
+                ehFeriado = true;
+                break;
+            }
+        }
+
+        if (ehFeriado)
+            Console.WriteLine("A data informada é um feriado nacional.");
+        else
+            Console.WriteLine("A data informada NÃO é um feriado nacional.");
+    }
+}
