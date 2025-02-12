@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+
+        Console.WriteLine("Escolha o tamanho da camiseta:");
+        Console.WriteLine("P - Pequeno");
+        Console.WriteLine("M - Médio");
+        Console.WriteLine("G - Grande");
+
+        char tamanho = Char.ToUpper(Console.ReadLine()[0]);
+
+        decimal preco = tamanho switch
+        {
+            'P' => 29.99m,
+            'M' => 39.99m,
+            'G' => 49.99m,
+            _ => 0
+        };
+
+        if (preco == 0)
+        {
+            Console.WriteLine("Tamanho inválido.");
+        }
+        else
+        {
+            Console.WriteLine($"O preço da camiseta tamanho {tamanho} é R${preco}.");
+        }
+    }
+}
