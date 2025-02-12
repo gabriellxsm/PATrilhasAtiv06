@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+
+        Console.Write("Digite uma letra: ");
+        char letra = Char.ToLower(Console.ReadLine()[0]);
+
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
+            Console.WriteLine("A letra é uma vogal.");
+        else
+            Console.WriteLine("A letra é uma consoante.");
+    }
+}
